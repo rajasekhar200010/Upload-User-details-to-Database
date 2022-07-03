@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add speaker details</title>
+    <link rel="stylesheet" href="{% static 'enroll/css/bootstrap.css' %}">
+
+
+    <style>
+        .center {
+          text-align: center;
+          color:white;
+          background-color: black;
+        }
+
+
+        .btnhome {
+          background-color: rgb(255, 30, 146);
+          border: none;
+          color: white;
+          padding: 12px 16px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        
+        /* Darker background on mouse-over */
+        .btn:hover {
+          background-color: RoyalBlue;
+        }
+
+
+
+        body {
+          background: #007bff;
+          background: linear-gradient(to right, #0062E6, #33AEFF);
+        }
+
+        </style>
+</head>
+<body  >
+
+ 
+    
+    <h1  class="center" style="font-family: Garamond, serif; font-weight: bold;  color :rgb(255, 255, 255)">Add Speaker details to Database</h1>
+  
+    <!--<button class="btnhome"><i class="fa fa-home"></i> Home</button>-->
+
+    <button  class="btnhome"  onclick="window.location.href='home'">Home</button>
+
+    <!--
+    <form action="adduser" method="post">
+        {%csrf_token%}
+
+
+        <label>Username : </label>
+        <input type="text" id = "username" name ="username" placeholder="Enter Username">
+        <br>
+
+
+        <label>First Name : </label>
+        <input type ="text" id = 'fname' name = "fname" placeholder="Enter First Name">
+        <br>
+
+
+        <label>Last Name : </label>
+        <input type="text" name="lname" id="lname" placeholder="Enter Last Name">
+        <br>
+
+        <label>Phone Number : </label>
+        <input type="text" name="phnumber" id="phnumber" placeholder="Enter Phone Number">
+        <br>
+
+        <label>Email : </label>
+        <input type="email" id="email" name="email" placeholder="Enter Email">
+        <br>
+
+        <br>
+
+        <button type="submit">Add speaker details</button>
+
+
+
+
+
+
+    </form>   
+
+    -->
+    
+ 
+    <form style="margin: auto; width: 500px;" style="background-color:#33475b"  action="adduser" method="post">
+
+        {%csrf_token%}
+     
+        
+     
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-19 col-md-27 col-lg-25 mx-auto">
+              <div class="card border-10 shadow rounded-13 my-5">
+                <div class="card-body p-24 p-sm-15">
+
+
+
+                  <h5 class="card-title text-center mb-5 fw-light fs-5">Enter Details</h5>
+
+         <!-- Username -->
+         <div class="form-outline mb-15">
+            <input type="text" id = "username" name ="username" placeholder="Enter Username" class="form-control">
+            <label class="form-label" for="form3Example3"></label>
+          </div><br>
+
+
+          <!-- 2 column grid layout with text inputs for the first and last names -->
+       <div class="row mb-4">
+        <div class="col">
+         <div class="form-outline">
+            <input type ="text" id = 'fname' name = "fname" placeholder="Enter First Name"  class="form-control">
+        <label class="form-label" for="form3Example1"></label>
+      </div>
+
+      </div>
+      <div class="col">
+      <div class="form-outline">
+        <input type="text" name="lname" id="lname" placeholder="Enter Last Name" class="form-control">
+        <label class="form-label" for="form3Example2"></label>
+       </div>
+       </div>
+     </div>
+         
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="email" name="email" placeholder="Enter Email" class="form-control">
+          <label class="form-label" for="form3Example3"></label>
+        </div>
+      
+        <!-- phone number -->
+        <div class="form-outline mb-4">
+            <input type="text" name="phnumber" id="phnumber" placeholder="Enter Phone Number" class="form-control">
+          <label class="form-label" for="form3Example4"></label>
+        </div>
+      
+        
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Add Speaker Details</button>
+      
+      </form>
+      
+
+      <div class="text-center">
+      <button type="button" class="btn btn-dark btn-rounded"><a href="/listspeakers"  text-align: center>Show the list of Speakers</a></button>
+      </div>
+
+
+
+
+
+       </div>
+      </div>
+      </div> 
+     </div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!--end here-->
+
+
+
+    <br>
+    <!--
+    <button type="submit"   class="btn btn-danger" style="margin: auto; width: 500px;" ><a href="/listspeakers"  text-align: center>Show the list of Speakers</a></button>
+    -->
+    <script src="{% static 'enroll/js/jquery.js' %}"></script>
+    <script src="{% static 'enroll/js/popper.js' %}"></script>
+    <script src="{% static 'enroll/js/bootstrap.js' %}"></script>
+   
+</body>
+</html>
